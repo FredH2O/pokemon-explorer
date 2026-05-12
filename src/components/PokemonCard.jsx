@@ -1,10 +1,14 @@
 import "../styles/PokemonCard.css";
 
-function PokemonCard({ name, image }) {
+function PokemonCard({ pokemon, addToFavourites }) {
   return (
     <div className="card">
-      <h3>{name}</h3>
-      <img src={image} alt={name} />
+      <h3>{pokemon.name}</h3>
+      <img src={pokemon.image} alt={pokemon.name} />
+
+      <button onClick={() => addToFavourites(pokemon)}>
+        Add to favourites
+      </button>
     </div>
   );
 }

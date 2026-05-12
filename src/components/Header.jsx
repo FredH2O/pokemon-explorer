@@ -1,12 +1,13 @@
 import "../styles/Header.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
       <h1>Pokemon Explorer</h1>
       <nav>
-        <a href="/">Home</a>
-        <a href="/favourites">Favourites</a>
+        <Link to="/">Home</Link>
+        <Link to="/favourites">Favourites</Link>
       </nav>
     </header>
   );
