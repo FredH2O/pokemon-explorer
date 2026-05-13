@@ -13,10 +13,15 @@ function Home({ addToFavourites }) {
       const detailedPokemon = await Promise.all(
         res.data.results.map(async (pokemon) => {
           const pokeRes = await axios.get(pokemon.url);
+          console.log("Pokemon:", pokeRes.data.name, pokeRes.data);
           return {
             id: pokeRes.data.id,
             name: pokeRes.data.name,
             image: pokeRes.data.sprites.front_default,
+            cry: pokeRes.data.cries.latest,
+            height: pokeRes.data.height,
+            weight: pokeRes.data.weight,
+            types: pokeRes.data.types.map((typeInfo) => typeInfo.type.name),
           };
         }),
       );
