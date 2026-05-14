@@ -8,6 +8,8 @@ function PokemonCard({ pokemon, addToFavourites }) {
       <img src={pokemon.image} alt={pokemon.name} />
 
       <p>Type: {pokemon.types.join(", ")}</p>
+      <p>Weight: {pokemon.weight}</p>
+      <p>Height: {pokemon.height}</p>
 
       <audio controls>
         <source src={pokemon.cry} type="audio/ogg" />
