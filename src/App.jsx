@@ -49,7 +49,13 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Home addToFavourites={addToFavourites} />}
+            element={
+              <Home
+                favouritePokemon={favouritePokemon}
+                addToFavourites={addToFavourites}
+                removeFromFavourites={removeFromFavourites}
+              />
+            }
           />
           <Route
             path="/favourites"

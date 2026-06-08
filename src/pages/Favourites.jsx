@@ -1,6 +1,16 @@
 import "../styles/Favourites.css";
 
 function Favourites({ favouritePokemon, removeFromFavourites }) {
+  if (favouritePokemon.length === 0) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <p className="text-xl font-semibold text-gray-500">
+          No favourited pokemon yet!
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="favourite-pokemon-page">
       {favouritePokemon.map((pokemon) => (

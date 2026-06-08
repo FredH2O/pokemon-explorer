@@ -27,17 +27,6 @@
   height: 36px;
 }
 
-.card button {
-  width: 100%;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 12px;
-  background: #e63946;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-}
-
 .card button:hover {
   background: #c92f3b;
 }

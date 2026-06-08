@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import PokemonCard from "../components/PokemonCard";
 
-function Home({ addToFavourites }) {
+function Home({ addToFavourites, favouritePokemon, removeFromFavourites }) {
   const [pokemon, setPokemon] = useState([]);
 
   useEffect(() => {
@@ -39,6 +39,8 @@ function Home({ addToFavourites }) {
           key={singlePokemon.id}
           pokemon={singlePokemon}
           addToFavourites={addToFavourites}
+          favouritePokemon={favouritePokemon}
+          removeFromFavourites={removeFromFavourites}
         />
       ))}
     </div>
